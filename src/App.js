@@ -2,18 +2,25 @@ import React from 'react'
 import { Routes, Route } from "react-router-dom";
 
 import './scss/App.scss';
+import './scss/AppMobile.scss';
+// import './scss/AppDesktop.scss';
 
 import Index from './pages/Index';
+import Layout from './pages/Layout';
 import Campgrounds from './pages/Campgrounds';
 import NotFound from './pages/NotFound';
 
 function App() {
+
+
 	return (
 		<div id='App'>
 			<Routes>
-				<Route path="/" element={<Index />}></Route>
-				<Route path="/campgrounds" element={<Campgrounds />} />
-				<Route path="*" element={<NotFound />} />
+				<Route path="/index" element={<Index />} />
+				<Route path="/" element={<Layout />}>
+					<Route path="" element={<Campgrounds />} />
+					<Route path="*" element={<NotFound />} />
+				</Route>
 			</Routes>
 		</div>
 	);

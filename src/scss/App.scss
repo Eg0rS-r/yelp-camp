@@ -1,5 +1,15 @@
 @import url(./_fonts.scss);
 
+@import url(./_global.scss);
+
+:root {
+	--text-color: #595959;
+	--bg-default-color: #fff;
+	--bg-default-invert-color: #000;
+	--bg-accent-color: #cacaca;
+	--bg-index-color: #f9f6f1;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -7,8 +17,11 @@
 }
 
 body {
-	font-family: 'Archivo';
+	font-family: "Archivo";
 	font-size: 1.125rem;
 }
 
-@import url(./_global.scss);
+h1 {
+	font-size: 3.5rem;
+}
+
