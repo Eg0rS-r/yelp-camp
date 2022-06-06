@@ -43,7 +43,7 @@ const Index = () => {
         />
       )}
 
-      <div className={`container ${style.content}`}>
+      <div className={style.content}>
         <h1>Explore the best camps on Earth.</h1>
         <p className={style.text}>
           YelpCamp is a curated list of the best camping spots on Earth.
@@ -54,7 +54,7 @@ const Index = () => {
           <li>Leave reviews and experiences.</li>
           <li>See locations for all camps.</li>
         </ul>
-        <Link className="btn" to="/campgrounds">
+        <Link className="btn btn--primary" to="/">
           View Campgrounds
         </Link>
         <Partners />

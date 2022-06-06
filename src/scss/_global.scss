@@ -2,13 +2,64 @@
 	width: fit-content;
 	display: block;
 	padding: 1.125rem 1.5rem;
+	line-height: 150%;
 	border-radius: 5px;
+	font-size: 1.125rem;
 	font-weight: bold;
 	text-decoration: none;
-	color: white;
-	background-color: black;
+	cursor: pointer;
+
+	&--primary {
+		border: none;
+		color: var(--bg-default-color);
+		background-color: var(--bg-default-invert-color);
+	}
+
+	&--regular {
+		border: 2px var(--bg-accent-color) solid;
+		color: var(--bg-default-invert-color);
+		background-color: var(--bg-default-color);
+	}
+	
+	&:focus {
+		outline: 2px var(--outline-color) solid;
+	}
 }
 
+.close-btn {
+	background: none;
+	border: none;
+	padding: 4px;
+	opacity: .7;
+	transition-duration: .3s;
+	&:hover {
+		opacity: 1;
+	}
+}
+
+
+.link {
+	color: var(--text-color);
+	transition-duration: .3s;
+	
+	&:hover {
+		color: var(--bg-default-invert-color);
+	}
+
+
+	&_accent {
+		color: var(--link-accent-color);
+		transition-duration: .3s;
+
+		&:hover {
+			color: var(--outline-color);
+		}
+	}
+}
+
+
 .container {
-	padding: 40px;
+	padding: 40px 40px 0;
+	max-width: 1220px;
+	margin: 0 auto;
 }

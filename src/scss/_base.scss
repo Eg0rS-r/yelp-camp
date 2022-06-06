@@ -1,0 +1,56 @@
+:root {
+	--text-color: #595959;
+	--bg-default-color: #fff;
+	--bg-default-invert-color: #000;
+	--bg-accent-color: #f9f6f1;
+	--border-color: #cacaca;
+	--link-accent-color: #75D6FF;
+	--outline-color: #e59700;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Archivo";
+	font-size: 1.125rem;
+	color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+	color: var(--bg-default-invert-color);
+}
+
+h1 {
+	font-size: 3.5rem;
+}
+
+h2 {
+	font-size: 2.25rem;
+}
+
+p {
+	line-height: 150%;
+}
+
+input {
+	font-size: 18px;
+	line-height: 150%;
+	padding-top: 1.125rem;
+	padding-bottom: 1.125rem;
+	border-radius: 5px;
+	border: 1px var(--border-color) solid;
+}
+
+button {
+	cursor: pointer;
+}
+
+button > img {
+	display: block;
+}

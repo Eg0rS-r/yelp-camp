@@ -1,13 +1,17 @@
 .index {
 	min-height: 100vh;
 	display: grid;
-	background-color: var(--bg-index-color);
+	background-color: var(--bg-accent-color);
 }
 
 .img {
 	height: 375px;
 	width: 100vw;
 	object-fit: cover;
+}
+
+.content {
+	padding: 40px;
 }
 
 .logo {
@@ -45,15 +49,17 @@
 }
 
 @media (max-width: 415px) {
-	.logo {
+	.logo, .content {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
 }
+
 @media (min-width: 768px) {
 	.index {
 		grid-template-columns: 0.55fr 0.45fr;
 		grid-template-rows: auto 1fr;
+		padding-left: 40px;
 	}
 
 	.content {
@@ -70,7 +76,9 @@
 	}
 
 	.logo {
-		width: 520px;
+		width: 100%;
+		max-width: 520px;
 		margin: 0 auto;
+		padding-left: 0;
 	}
 }

@@ -2,8 +2,6 @@ import React from 'react'
 import { Routes, Route } from "react-router-dom";
 
 import './scss/App.scss';
-import './scss/AppMobile.scss';
-// import './scss/AppDesktop.scss';
 
 import Index from './pages/Index';
 import Layout from './pages/Layout';
