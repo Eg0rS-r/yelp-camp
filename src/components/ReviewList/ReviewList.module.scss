@@ -1,0 +1,15 @@
+.list {
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+}
+
+.item {
+	padding-bottom: 1.6rem;
+	margin-bottom: 1.6rem;
+	border-bottom: 1px var(--border-color) solid;
+}
+
+.button {
+	margin-left: auto;
+}

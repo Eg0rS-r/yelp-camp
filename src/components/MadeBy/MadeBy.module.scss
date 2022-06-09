@@ -1,5 +1,5 @@
 .madeBy {
-	padding: .625rem 2rem;
+	padding: 0.625rem 2rem;
 	margin: 0 auto;
 	background-color: var(--bg-default-invert-color);
 	color: var(--bg-default-color);
@@ -8,4 +8,11 @@
 	align-items: center;
 	gap: 2.25rem;
 	text-align: center;
+}
+
+@media (max-width: 415px) {
+	.madeBy {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
 }

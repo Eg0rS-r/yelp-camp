@@ -1,0 +1,27 @@
+.campground > div {
+	padding: 3.5rem;
+	border: 1px var(--border-color) solid;
+	border-radius: 5px;
+}
+
+.campground {
+	display: grid;
+	grid-template-columns: .37fr .63fr;
+	grid-template-areas:
+		"a b"
+		"c d";
+		gap: 40px;
+}
+
+.camp_info {
+	grid-area: b;
+}
+
+.map {
+	grid-area: a;
+	height: fit-content;
+}
+
+.review {
+	grid-area: d;
+}

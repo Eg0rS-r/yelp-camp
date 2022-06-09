@@ -5,7 +5,8 @@ import './scss/App.scss';
 
 import Index from './pages/Index';
 import Layout from './pages/Layout';
-import Campgrounds from './pages/Campgrounds';
+import CampgroundsList from './pages/CampgroundsList';
+import Campground from './pages/Campground';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
 			<Routes>
 				<Route path="/index" element={<Index />} />
 				<Route path="/" element={<Layout />}>
-					<Route path="" element={<Campgrounds />} />
+					<Route path="" element={<CampgroundsList />} />
+					<Route path="campground" element={<Campground />} />
 					<Route path="*" element={<NotFound />} />
 				</Route>
 			</Routes>

@@ -1,0 +1,21 @@
+.review {
+	width: 100%;
+	display: grid;
+	grid-template-areas: 
+		'a b'
+		'c c';
+	gap: 1rem;
+}
+
+.author {
+	grid-area: a;
+}
+
+.time {
+	grid-area: b;
+	justify-self: end;
+}
+
+.text {
+	grid-area: c;
+}

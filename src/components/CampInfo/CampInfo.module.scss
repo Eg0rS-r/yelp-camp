@@ -1,0 +1,33 @@
+.img {
+	max-width: 100%;
+	border-radius: 5px;
+}
+
+.content {
+	margin-top: 1.6rem;
+	display: grid;
+	grid-template-areas: 
+	'a b'
+	'c c'
+	'd d';
+	gap: 1rem;
+}
+
+.title {
+	grid-area: a;
+}
+
+.price {
+	grid-area: b;
+	justify-self: end;
+	align-self: end;
+	color: var(--bg-default-invert-color);
+}
+
+.text {
+	grid-area: c;
+}
+
+.add_by {
+	grid-area: d;
+}
