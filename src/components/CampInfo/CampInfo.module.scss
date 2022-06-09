@@ -6,10 +6,10 @@
 .content {
 	margin-top: 1.6rem;
 	display: grid;
-	grid-template-areas: 
-	'a b'
-	'c c'
-	'd d';
+	grid-template-areas:
+		"a b"
+		"c c"
+		"d d";
 	gap: 1rem;
 }
 

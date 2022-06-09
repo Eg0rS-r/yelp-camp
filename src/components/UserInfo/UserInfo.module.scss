@@ -1,0 +1,17 @@
+.user {
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 1rem;
+	height: fit-content;
+	width: fit-content;
+}
+
+.avatar {
+	border-radius: 50%;
+	align-self: stretch;
+}
+
+.info > p {
+	padding-top: .2rem;
+	font-size: 1rem;
+}

@@ -25,3 +25,20 @@
 .review {
 	grid-area: d;
 }
+
+
+@media (max-width: 800px) {
+	.campground {
+		grid-template-columns: none;
+		grid-template-areas:
+		"b"
+		"d"
+		"a";
+	}
+}
+
+@media (max-width: 500px) {
+	.campground > div {
+		padding: 2.25rem;
+	}
+}

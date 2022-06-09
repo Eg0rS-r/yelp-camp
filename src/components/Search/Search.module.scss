@@ -27,6 +27,7 @@
 	& > input {
 		padding-left: 3.25rem;
 		width: 16rem;
+		border: 1px var(--border-color) solid;
 	}
 
 	&::before {
@@ -48,7 +49,8 @@
 		padding: 36px;
 	}
 
-	.form input, .input_container {
+	.form input,
+	.input_container {
 		width: 100%;
 	}
 }

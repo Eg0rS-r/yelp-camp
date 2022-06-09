@@ -58,7 +58,6 @@ const Index = () => {
           View Campgrounds
         </Link>
         <Partners />
-				<Outlet />
       </div>
     </main>
   );
