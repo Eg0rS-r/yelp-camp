@@ -1,9 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-import searchReducer from './slices/searchSlice';
+import search from './slices/searchSlice';
+import campground from './slices/campgroundSlice';
+import review from './slices/reviewSlice';
 
 export const store = configureStore({
   reducer: {
-		searchReducer
+		search,
+		campground,
+		review,
 	},
 })

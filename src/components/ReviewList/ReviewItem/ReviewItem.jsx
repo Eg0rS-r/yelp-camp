@@ -1,19 +1,16 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-
-// import campImage from "../../../assets/images/camp images/high quality images/Latik Riverside.jpg"
+import ReactTimeAgo from "react-time-ago";
 
 import style from "./ReviewItem.module.scss";
 
-const ReviewItem = () => {
+const ReviewItem = ({ createdAt, name, text }) => {
   return (
     <div className={style.review}>
-      <h4 className={style.author}>Isaac Dylan</h4>
-      <span className={style.time}>1 day ago</span>
-      <p className={style.text}>
-        Traveling changes you as a person, you gain more perspective, this is
-        the perfect spot to do that.
-      </p>
+      <h4 className={style.author}>{name}</h4>
+      <span className={style.time}>
+        <ReactTimeAgo date={new Date(createdAt).getTime()} locale="en-US" />
+      </span>
+      <p className={style.text}>{text}</p>
     </div>
   );
 };

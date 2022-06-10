@@ -1,37 +1,40 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+
+import { fetchCampground } from "../../redux/slices/campgroundSlice";
 
 import CampItem from "./CampItem";
+
+import CampSkeleton from "./CampItem/Skeleton";
 
 import style from "./CampList.module.scss";
 
 const CampList = () => {
-  const searchText = useSelector((state) => state.searchReducer.value);
-  const [items, setItems] = useState([]);
-
-  console.log("CampList render", searchText);
+  const campgroundItems = useSelector((state) => state.campground.items);
+  const isCampgorundsLoading = useSelector((state) => state.campground.status);
+  const searchText = useSelector((state) => state.search.value);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    axios
-      .get(
-        `https://629b555acf163ceb8d17dbbd.mockapi.io/campgrounds?search=${searchText}`
-      )
-      .then((res) => {
-        setItems(res.data);
-        console.log(res);
-      });
+    dispatch(
+      fetchCampground({
+        searchText,
+      })
+    );
+    console.log("camp list", campgroundItems);
   }, [searchText]);
 
   return (
     <div className={style.campground}>
       <ul className={style.list}>
-        {items.map((obj) => (
-          <li key={obj.id}>
-            <CampItem {...obj} />
-          </li>
-        ))}
+        {isCampgorundsLoading === 'loading'
+          ? [...new Array(6)].map((_, index) => <CampSkeleton key={index} />)
+          : campgroundItems.map((obj) => (
+              <li key={obj.id}>
+                <CampItem {...obj} />
+              </li>
+            ))}
       </ul>
     </div>
   );
