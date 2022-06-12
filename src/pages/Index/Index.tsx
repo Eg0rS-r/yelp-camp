@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import Partners from "../../components/Partners";
@@ -11,8 +11,8 @@ import indexImage from "../../assets/images/index page/Hero Image.jpg";
 import yelpLogo from "../../assets/images/logos/Logo.svg";
 
 
-const Index = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+const Index: React.FC = () => {
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
   useEffect(() => {
     function handleResize() {

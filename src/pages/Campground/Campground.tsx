@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 
-import { fetchCamp } from "../../redux/slices/campgroundSlice";
+import { useAppDispatch } from "../../redux/store";
+import { fetchCamp, selectCurrentItem } from "../../redux/slices/campItemSlice";
 
 import CampInfo from "../../components/CampInfo";
 import Map from "../../components/Map";
@@ -10,10 +11,10 @@ import ReviewList from "../../components/ReviewList";
 
 import style from "./Campground.module.scss";
 
-const Campground = () => {
-  const item = useSelector((state) => state.campground.currentItem);
-  const dispatch = useDispatch();
-  const { id } = useParams();
+const Campground: React.FC = () => {
+  const item = useSelector(selectCurrentItem);
+  const dispatch = useAppDispatch();
+  const { id } = useParams() as { id: string };
 
   useEffect(() => {
     dispatch(fetchCamp(id));
@@ -28,7 +29,7 @@ const Campground = () => {
         <Map coord={item.coord} />
       </div>
       <div className={style.review}>
-        <ReviewList id={id} />
+        <ReviewList campId={id} />
       </div>
     </div>
   );

@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+
 import { change } from "../../redux/slices/searchSlice";
+import { useAppDispatch } from "../../redux/store";
 
 import style from "./Search.module.scss";
 
-const Search = () => {
-  const dispatch = useDispatch();
+const Search: React.FC = () => {
+  const dispatch = useAppDispatch();
 
   return (
     <section className={style.search}>
@@ -26,7 +27,7 @@ const Search = () => {
         </div>
         <input className="btn btn--primary" type="submit" value="Search" />
       </form>
-      <Link className="link" to="/login:add">
+      <Link className="link" to="/login/:add">
         Or add your own campground
       </Link>
     </section>
