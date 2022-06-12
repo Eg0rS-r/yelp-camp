@@ -1,7 +1,11 @@
 import React from "react";
 import ContentLoader from "react-content-loader";
 
-const CampSkeleton = (props) => (
+interface CampSkeletonProps {
+	key: number;
+}
+
+const CampSkeleton: React.FC<CampSkeletonProps> = (props) => (
   <ContentLoader
     speed={2}
     width={326}
@@ -9,7 +13,7 @@ const CampSkeleton = (props) => (
     viewBox="0 0 326 364"
     backgroundColor="#f3f3f3"
     foregroundColor="#ecebeb"
-    {...props}
+		{...props}
   >
     <rect x="1" y="0" rx="5" ry="5" width="326" height="180" />
     <rect x="1" y="196" rx="5" ry="5" width="163" height="20" />

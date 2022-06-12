@@ -1,10 +1,8 @@
 import React from "react";
 
-import campImage from "../../assets/images/users/User Testimonial.svg";
-
 import style from "./LoginForm.module.scss";
 
-const LoginForm = () => {
+const LoginForm: React.FC = () => {
   return (
     <form className={style.form}>
       <h2>Start exploring camps from all around the world.</h2>
