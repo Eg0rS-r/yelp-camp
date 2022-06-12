@@ -1,0 +1,44 @@
+.campground > div {
+	padding: 3.5rem;
+	border: 1px var(--border-color) solid;
+	border-radius: 5px;
+}
+
+.campground {
+	display: grid;
+	grid-template-columns: .37fr .63fr;
+	grid-template-areas:
+		"a b"
+		"c d";
+		gap: 40px;
+}
+
+.camp_info {
+	grid-area: b;
+}
+
+.map {
+	grid-area: a;
+	height: fit-content;
+}
+
+.review {
+	grid-area: d;
+}
+
+
+@media (max-width: 800px) {
+	.campground {
+		grid-template-columns: none;
+		grid-template-areas:
+		"b"
+		"d"
+		"a";
+	}
+}
+
+@media (max-width: 500px) {
+	.campground > div {
+		padding: 2.25rem;
+	}
+}

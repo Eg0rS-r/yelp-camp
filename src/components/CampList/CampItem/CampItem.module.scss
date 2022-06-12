@@ -1,0 +1,27 @@
+.camp_card {
+	padding: 1rem;
+	border: 1px var(--border-color) solid;
+	border-radius: 5px;
+	max-width: 360px;
+}
+
+.img {
+	width: 100%;
+	border-radius: 5px;
+	margin-bottom: 1rem;
+	min-height: 183px;
+	object-fit: cover;
+}
+
+.title {
+	margin-bottom: .5rem;
+}
+
+.text {
+	margin-bottom: 1rem;
+}
+
+.link {
+	width: 100%;
+	text-align: center;
+}

@@ -1,0 +1,24 @@
+.partners {
+	margin-top: 2.25rem;
+}
+
+.title {
+	line-height: 150%;
+	margin-bottom: .5rem;
+}
+
+.list {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	max-width: 420px;
+}
+
+.item {
+	list-style-type: none;
+}
+
+.img {
+	display: block;
+}
+

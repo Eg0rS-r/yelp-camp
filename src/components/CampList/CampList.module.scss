@@ -1,0 +1,28 @@
+.campground {
+	margin-top: 80px;
+}
+
+.list {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 30px;
+	list-style-type: none;
+}
+
+@media (max-width: 870px) {
+	.campground {
+		margin-top: 40px;
+	}
+
+	.list {
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+	}
+}
+
+
+@media (max-width: 600px) {
+	.list {
+		grid-template-columns: 1fr;
+	}
+}
