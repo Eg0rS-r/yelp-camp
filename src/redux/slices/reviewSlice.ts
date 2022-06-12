@@ -9,7 +9,7 @@ enum Status {
 }
 
 export const fetchReviews = createAsyncThunk(
-  "campground/fetchReviews",
+  "review/fetchReviews",
   async (param: string) => {
     const { data } = await axios.get<ReviewItem[]>(
       `https://629b555acf163ceb8d17dbbd.mockapi.io/comments?campId=${param}`

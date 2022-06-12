@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 
 export const fetchCamp = createAsyncThunk(
-  "campground/fetchCamp",
+  "campItem/fetchCamp",
   async (param: string) => {
     const { data } = await axios.get<CampItem>(
       `https://629b555acf163ceb8d17dbbd.mockapi.io/camp/${param}`
